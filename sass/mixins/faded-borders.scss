@@ -1,0 +1,25 @@
+@mixin faded-borders($color) {
+	&:before, &:after
+	{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	transition: border 300ms;
+	}
+
+	&:before
+	{
+	width: calc(100% + 15px);
+	height: calc(100% + 15px);
+	border: 2px solid rgba($color, 0.5);
+	}
+
+	&:after
+	{
+	width: calc(100% + 25px);
+	height: calc(100% + 25px);
+	border: 2px solid rgba($color, 0.25);
+	}
+}

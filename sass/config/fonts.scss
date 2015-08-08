@@ -1,0 +1,12 @@
+@mixin font-heading {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+}
+
+@mixin font-body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.9rem;
+}
