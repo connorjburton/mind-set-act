@@ -1,4 +1,5 @@
-@mixin faded-borders($color) {
+@mixin faded-borders($color)
+{
 	&:before, &:after
 	{
 	content: "";

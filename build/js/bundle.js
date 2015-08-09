@@ -64,19 +64,23 @@
 
 	var _HeaderJsx2 = _interopRequireDefault(_HeaderJsx);
 
-	var _pagesWelcomeJsx = __webpack_require__(158);
+	var _NavJsx = __webpack_require__(172);
+
+	var _NavJsx2 = _interopRequireDefault(_NavJsx);
+
+	var _pagesWelcomeJsx = __webpack_require__(162);
 
 	var _pagesWelcomeJsx2 = _interopRequireDefault(_pagesWelcomeJsx);
 
-	var _pagesAboutJsx = __webpack_require__(162);
+	var _pagesAboutJsx = __webpack_require__(165);
 
 	var _pagesAboutJsx2 = _interopRequireDefault(_pagesAboutJsx);
 
-	var _pagesContactJsx = __webpack_require__(163);
+	var _pagesContactJsx = __webpack_require__(166);
 
 	var _pagesContactJsx2 = _interopRequireDefault(_pagesContactJsx);
 
-	__webpack_require__(168);
+	__webpack_require__(170);
 
 	var App = (function (_React$Component) {
 		_inherits(App, _React$Component);
@@ -94,6 +98,7 @@
 					'div',
 					{ className: 'app' },
 					_react2['default'].createElement(_HeaderJsx2['default'], null),
+					_react2['default'].createElement(_NavJsx2['default'], null),
 					_react2['default'].createElement(_pagesWelcomeJsx2['default'], null),
 					_react2['default'].createElement(_pagesAboutJsx2['default'], null),
 					_react2['default'].createElement(_pagesContactJsx2['default'], null)
@@ -20487,54 +20492,6 @@
 /* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var Header = (function (_React$Component) {
-		_inherits(Header, _React$Component);
-
-		function Header() {
-			_classCallCheck(this, Header);
-
-			_get(Object.getPrototypeOf(Header.prototype), "constructor", this).apply(this, arguments);
-		}
-
-		_createClass(Header, [{
-			key: "render",
-			value: function render() {
-				return _react2["default"].createElement("div", { className: "header" });
-			}
-		}]);
-
-		return Header;
-	})(_react2["default"].Component);
-
-	;
-
-	exports["default"] = Header;
-	module.exports = exports["default"];
-
-/***/ },
-/* 158 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
@@ -20555,68 +20512,64 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(159);
+	__webpack_require__(158);
 
-	var Welcome = (function (_React$Component) {
-		_inherits(Welcome, _React$Component);
+	var Header = (function (_React$Component) {
+		_inherits(Header, _React$Component);
 
-		function Welcome() {
-			_classCallCheck(this, Welcome);
+		function Header() {
+			_classCallCheck(this, Header);
 
-			_get(Object.getPrototypeOf(Welcome.prototype), 'constructor', this).apply(this, arguments);
+			_get(Object.getPrototypeOf(Header.prototype), 'constructor', this).apply(this, arguments);
 		}
 
-		_createClass(Welcome, [{
+		_createClass(Header, [{
 			key: 'render',
 			value: function render() {
 				return _react2['default'].createElement(
 					'div',
-					{ className: 'page' },
+					{ className: 'header' },
 					_react2['default'].createElement(
 						'div',
-						{ className: 'page__center' },
+						{ className: 'header__logo' },
+						_react2['default'].createElement('img', { src: '/images/logo.png' })
+					),
+					_react2['default'].createElement(
+						'div',
+						{ className: 'header__menu' },
 						_react2['default'].createElement(
-							'div',
-							{ className: 'page__head' },
-							_react2['default'].createElement(
-								'h1',
-								{ className: 'page__heading' },
-								'Welcome.'
-							)
+							'span',
+							{ className: 'header__link' },
+							'Menu'
 						),
 						_react2['default'].createElement(
 							'div',
-							{ className: 'page__body' },
-							_react2['default'].createElement(
-								'p',
-								null,
-								'Mind Set Act is a result driven training and coaching company for individuals but also for the B2B market. An organization is only a success when individual employess perform beyond expections. Bad results leads to unsatisfied customers and loss of profits. Teamwork, mutual adaption between co-workers and joint effort make for a happy customer.',
-								_react2['default'].createElement('br', null),
-								_react2['default'].createElement('br', null),
-								'Mind Set Act can play a crucial role in the realization of these goals through training, coaching and organizational advisory. Mind Set Act can also be contacted for outplacement and reintegration into working life.'
-							)
+							{ className: 'header__hamburger' },
+							_react2['default'].createElement('div', { className: 'header__line' }),
+							_react2['default'].createElement('div', { className: 'header__line' }),
+							_react2['default'].createElement('div', { className: 'header__line' })
 						)
 					)
 				);
 			}
 		}]);
 
-		return Welcome;
+		return Header;
 	})(_react2['default'].Component);
 
 	;
 
-	exports['default'] = Welcome;
+	exports['default'] = Header;
 	module.exports = exports['default'];
 
 /***/ },
-/* 159 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(160);
+	var content = __webpack_require__(159);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(161)(content, {});
@@ -20625,8 +20578,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./page.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./page.scss");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./header.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./header.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20636,17 +20589,73 @@
 	}
 
 /***/ },
-/* 160 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(160)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".page__link {\n  text-decoration: none;\n  transition: color 300ms; }\n\n.page {\n  height: 100vh;\n  width: 100%;\n  background-size: cover; }\n  .page--extend {\n    height: 100vh;\n    width: 100%;\n    background-size: cover;\n    min-height: 100vh; }\n  .page__head {\n    border: 2px solid black;\n    margin: 10px auto;\n    padding: 10px 0px;\n    width: 80%; }\n    .page__head:before, .page__head:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__head:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__head:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n  .page__heading {\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1.1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n  .page__body {\n    letter-spacing: 1px;\n    line-height: 22px;\n    margin-top: 60px;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 0.9rem; }\n  .page__center {\n    width: 80%;\n    max-width: 950px;\n    position: absolute;\n    top: 40%;\n    left: 50%;\n    transform: translateX(-50%) translateY(-50%);\n    text-align: center; }\n  .page__boxes {\n    width: 100%;\n    text-align: center;\n    margin-top: 60px; }\n  .page__box {\n    width: 100px;\n    height: 100px;\n    display: inline-block;\n    margin-left: 130px;\n    cursor: pointer;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1.1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n    .page__box:first-child {\n      margin-left: 0px; }\n  .page__box:hover .page__edge {\n    border: 2px solid yellow; }\n    .page__box:hover .page__edge:before, .page__box:hover .page__edge:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__box:hover .page__edge:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(255, 255, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__box:hover .page__edge:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(255, 255, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n  .page__edge {\n    border: 2px solid black;\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    left: 0px;\n    top: 0px;\n    transform: rotate(45deg);\n    transition: border 300ms; }\n    .page__edge:before, .page__edge:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__edge:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__edge:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n    .page__edge--active {\n      border: 2px solid black;\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      left: 0px;\n      top: 0px;\n      transform: rotate(45deg);\n      transition: border 300ms;\n      border: 2px solid yellow; }\n      .page__edge--active:before, .page__edge--active:after {\n        content: \"\";\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translateY(-50%) translateX(-50%); }\n      .page__edge--active:before {\n        width: calc(100% + 15px);\n        height: calc(100% + 15px);\n        border: 2px solid rgba(255, 255, 0, 0.5);\n        transition: border 300ms ease 0.1s; }\n      .page__edge--active:after {\n        width: calc(100% + 25px);\n        height: calc(100% + 25px);\n        border: 2px solid rgba(255, 255, 0, 0.25);\n        transition: border 300ms ease 0.2s; }\n  .page__diamond-text {\n    transform: translateX(-50%) translateY(-50%);\n    display: block;\n    position: absolute;\n    left: 50%;\n    top: 50%; }\n  .page__link {\n    color: black; }\n    .page__link:hover {\n      color: yellow; }\n  .page__form {\n    margin-top: 40px; }\n  .page__input {\n    margin-top: 20px;\n    border-width: 0px 0px 2px 0px;\n    border-color: black;\n    background: none;\n    transition: border 300ms;\n    width: 100%;\n    color: black;\n    padding: 5px 0px;\n    margin: 40px 0px 0px;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n    .page__input::-webkit-input-placeholder {\n      color: black;\n      opacity: 1; }\n    .page__input:hover, .page__input:focus {\n      border-color: yellow;\n      outline: none; }\n    .page__input:first-child {\n      margin-top: 0px; }\n    .page__input--textarea {\n      resize: none;\n      min-height: 125px;\n      border-width: 0px 0px 2px 0px;\n      border-color: black;\n      background: none;\n      transition: border 300ms;\n      width: 100%;\n      color: black;\n      padding: 5px 0px;\n      margin: 40px 0px 0px;\n      font-family: 'Montserrat', sans-serif;\n      font-weight: 700;\n      font-size: 1rem;\n      text-transform: uppercase;\n      letter-spacing: 8px; }\n      .page__input--textarea::-webkit-input-placeholder {\n        color: black;\n        opacity: 1; }\n      .page__input--textarea:hover, .page__input--textarea:focus {\n        border-color: yellow;\n        outline: none; }\n      .page__input--textarea:first-child {\n        margin-top: 0px; }\n  .page__submit-wrapper {\n    width: 200px;\n    margin: 40px auto 0px; }\n    .page__submit-wrapper:before, .page__submit-wrapper:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__submit-wrapper:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__submit-wrapper:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n    .page__submit-wrapper:hover {\n      /**\r\n\t\t\t * TODO: Change this. Not sure best way\r\n\t\t\t * to do this in BEM\r\n\t\t\t */ }\n      .page__submit-wrapper:hover:before, .page__submit-wrapper:hover:after {\n        content: \"\";\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translateY(-50%) translateX(-50%); }\n      .page__submit-wrapper:hover:before {\n        width: calc(100% + 15px);\n        height: calc(100% + 15px);\n        border: 2px solid rgba(255, 255, 0, 0.5);\n        transition: border 300ms ease 0.1s; }\n      .page__submit-wrapper:hover:after {\n        width: calc(100% + 25px);\n        height: calc(100% + 25px);\n        border: 2px solid rgba(255, 255, 0, 0.25);\n        transition: border 300ms ease 0.2s; }\n      .page__submit-wrapper:hover\n.page__submit {\n        border-color: yellow; }\n  .page__submit {\n    width: 100%;\n    background: none;\n    border: 2px solid black;\n    padding: 5px 0px;\n    transition: border 300ms;\n    position: relative;\n    cursor: pointer;\n    z-index: 10;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n", ""]);
+	exports.push([module.id, ".header {\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  padding: 20px;\n  z-index: 50;\n  height: 117px; }\n  .header--absolute {\n    position: absolute; }\n  .header__logo {\n    float: left; }\n  .header__menu {\n    cursor: pointer;\n    position: absolute;\n    right: 20px;\n    top: 50%;\n    transform: translateY(-50%);\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n    .header__menu:hover {\n      color: yellow;\n      /**\r\n\t\t\t * TODO: Too coupled? Bad\r\n\t\t\t */ }\n      .header__menu:hover .header__line, .header__menu:hover\n.header__line:before {\n        background: yellow; }\n  .header__link {\n    transition: color 300ms; }\n  .header__hamburger {\n    width: 20px;\n    height: 12px;\n    float: right;\n    margin: 1px 0px 0px 20px; }\n  .header__line {\n    width: 16px;\n    float: right;\n    height: 2px;\n    background: black;\n    margin-top: 3px;\n    transition: background 300ms; }\n    .header__line:first-child {\n      margin-top: 0px; }\n    .header__line:before {\n      content: \"\";\n      position: absolute;\n      left: -4px;\n      top: 0px;\n      background: black;\n      height: 2px;\n      width: 3px;\n      transition: background 300ms; }\n", ""]);
 
 	// exports
+
+
+/***/ },
+/* 160 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
 
 
 /***/ },
@@ -20878,6 +20887,124 @@
 /* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(163);
+
+	var Welcome = (function (_React$Component) {
+		_inherits(Welcome, _React$Component);
+
+		function Welcome() {
+			_classCallCheck(this, Welcome);
+
+			_get(Object.getPrototypeOf(Welcome.prototype), 'constructor', this).apply(this, arguments);
+		}
+
+		_createClass(Welcome, [{
+			key: 'render',
+			value: function render() {
+				return _react2['default'].createElement(
+					'div',
+					{ className: 'page' },
+					_react2['default'].createElement(
+						'div',
+						{ className: 'page__center' },
+						_react2['default'].createElement(
+							'div',
+							{ className: 'page__head' },
+							_react2['default'].createElement(
+								'h1',
+								{ className: 'page__heading' },
+								'Welcome.'
+							)
+						),
+						_react2['default'].createElement(
+							'div',
+							{ className: 'page__body' },
+							_react2['default'].createElement(
+								'p',
+								null,
+								'Mind Set Act is a result driven training and coaching company for individuals but also for the B2B market. An organization is only a success when individual employess perform beyond expections. Bad results leads to unsatisfied customers and loss of profits. Teamwork, mutual adaption between co-workers and joint effort make for a happy customer.',
+								_react2['default'].createElement('br', null),
+								_react2['default'].createElement('br', null),
+								'Mind Set Act can play a crucial role in the realization of these goals through training, coaching and organizational advisory. Mind Set Act can also be contacted for outplacement and reintegration into working life.'
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return Welcome;
+	})(_react2['default'].Component);
+
+	;
+
+	exports['default'] = Welcome;
+	module.exports = exports['default'];
+
+/***/ },
+/* 163 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(164);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(161)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./page.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./page.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(160)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".page__link {\n  text-decoration: none;\n  transition: color 300ms; }\n\n.page {\n  height: 100vh;\n  width: 100%;\n  background-size: cover; }\n  .page--extend {\n    min-height: 100vh; }\n  .page__head {\n    border: 2px solid black;\n    margin: 10px auto;\n    padding: 10px 0px;\n    width: 80%; }\n    .page__head:before, .page__head:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__head:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__head:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n  .page__heading {\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1.1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n  .page__body {\n    letter-spacing: 1px;\n    line-height: 22px;\n    margin-top: 60px;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 0.9rem; }\n  .page__center {\n    width: 80%;\n    max-width: 950px;\n    position: absolute;\n    top: 40%;\n    left: 50%;\n    transform: translateX(-50%) translateY(-50%);\n    text-align: center; }\n  .page__boxes {\n    width: 100%;\n    text-align: center;\n    margin-top: 60px; }\n  .page__box {\n    width: 100px;\n    height: 100px;\n    display: inline-block;\n    margin-left: 130px;\n    cursor: pointer;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1.1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n    .page__box:first-child {\n      margin-left: 0px; }\n  .page__box:hover .page__edge {\n    border: 2px solid yellow; }\n    .page__box:hover .page__edge:before, .page__box:hover .page__edge:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__box:hover .page__edge:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(255, 255, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__box:hover .page__edge:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(255, 255, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n  .page__edge {\n    border: 2px solid black;\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    left: 0px;\n    top: 0px;\n    transform: rotate(45deg);\n    transition: border 300ms; }\n    .page__edge:before, .page__edge:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__edge:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__edge:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n    .page__edge--active {\n      border: 2px solid black;\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      left: 0px;\n      top: 0px;\n      transform: rotate(45deg);\n      transition: border 300ms;\n      border: 2px solid yellow; }\n      .page__edge--active:before, .page__edge--active:after {\n        content: \"\";\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translateY(-50%) translateX(-50%); }\n      .page__edge--active:before {\n        width: calc(100% + 15px);\n        height: calc(100% + 15px);\n        border: 2px solid rgba(255, 255, 0, 0.5);\n        transition: border 300ms ease 0.1s; }\n      .page__edge--active:after {\n        width: calc(100% + 25px);\n        height: calc(100% + 25px);\n        border: 2px solid rgba(255, 255, 0, 0.25);\n        transition: border 300ms ease 0.2s; }\n  .page__diamond-text {\n    transform: translateX(-50%) translateY(-50%);\n    display: block;\n    position: absolute;\n    left: 50%;\n    top: 50%; }\n  .page__link {\n    color: black; }\n    .page__link:hover {\n      color: yellow; }\n  .page__form {\n    margin-top: 40px; }\n  .page__input {\n    margin-top: 20px;\n    border-width: 0px 0px 2px 0px;\n    border-color: black;\n    background: none;\n    transition: border 300ms;\n    width: 100%;\n    color: black;\n    padding: 5px 0px;\n    margin: 40px 0px 0px;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n    .page__input::-webkit-input-placeholder {\n      color: black;\n      opacity: 1; }\n    .page__input:hover, .page__input:focus {\n      border-color: yellow;\n      outline: none; }\n    .page__input:first-child {\n      margin-top: 0px; }\n    .page__input--textarea {\n      resize: none;\n      min-height: 125px;\n      border-width: 0px 0px 2px 0px;\n      border-color: black;\n      background: none;\n      transition: border 300ms;\n      width: 100%;\n      color: black;\n      padding: 5px 0px;\n      margin: 40px 0px 0px;\n      font-family: 'Montserrat', sans-serif;\n      font-weight: 700;\n      font-size: 1rem;\n      text-transform: uppercase;\n      letter-spacing: 8px; }\n      .page__input--textarea::-webkit-input-placeholder {\n        color: black;\n        opacity: 1; }\n      .page__input--textarea:hover, .page__input--textarea:focus {\n        border-color: yellow;\n        outline: none; }\n      .page__input--textarea:first-child {\n        margin-top: 0px; }\n  .page__submit-wrapper {\n    width: 200px;\n    margin: 40px auto 0px; }\n    .page__submit-wrapper:before, .page__submit-wrapper:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__submit-wrapper:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__submit-wrapper:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n    .page__submit-wrapper:hover {\n      /**\r\n\t\t\t * TODO: Change this. Not sure best way\r\n\t\t\t * to do this in BEM\r\n\t\t\t */ }\n      .page__submit-wrapper:hover:before, .page__submit-wrapper:hover:after {\n        content: \"\";\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translateY(-50%) translateX(-50%); }\n      .page__submit-wrapper:hover:before {\n        width: calc(100% + 15px);\n        height: calc(100% + 15px);\n        border: 2px solid rgba(255, 255, 0, 0.5);\n        transition: border 300ms ease 0.1s; }\n      .page__submit-wrapper:hover:after {\n        width: calc(100% + 25px);\n        height: calc(100% + 25px);\n        border: 2px solid rgba(255, 255, 0, 0.25);\n        transition: border 300ms ease 0.2s; }\n      .page__submit-wrapper:hover\n.page__submit {\n        border-color: yellow; }\n  .page__submit {\n    width: 100%;\n    background: none;\n    border: 2px solid black;\n    padding: 5px 0px;\n    transition: border 300ms;\n    position: relative;\n    cursor: pointer;\n    z-index: 10;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -20988,7 +21115,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 163 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21011,7 +21138,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _FooterJsx = __webpack_require__(164);
+	var _FooterJsx = __webpack_require__(167);
 
 	var _FooterJsx2 = _interopRequireDefault(_FooterJsx);
 
@@ -21029,7 +21156,7 @@
 			value: function render() {
 				return _react2['default'].createElement(
 					'div',
-					{ className: 'page--extend' },
+					{ className: 'page page--extend' },
 					_react2['default'].createElement(
 						'div',
 						{ className: 'page__center' },
@@ -21056,7 +21183,7 @@
 								),
 								_react2['default'].createElement('br', null),
 								_react2['default'].createElement('br', null),
-								'If you’d prefer to leave a message please use the contact form below and we will get back to you.'
+								'If you\'d prefer to leave a message please use the contact form below and we will get back to you.'
 							)
 						),
 						_react2['default'].createElement(
@@ -21087,7 +21214,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 164 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21110,7 +21237,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(165);
+	__webpack_require__(168);
 
 	var Footer = (function (_React$Component) {
 		_inherits(Footer, _React$Component);
@@ -21198,13 +21325,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 165 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(166);
+	var content = __webpack_require__(169);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(161)(content, {});
@@ -21224,10 +21351,10 @@
 	}
 
 /***/ },
-/* 166 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(160)();
 	// imports
 
 
@@ -21238,69 +21365,13 @@
 
 
 /***/ },
-/* 167 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 168 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(169);
+	var content = __webpack_require__(171);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(161)(content, {});
@@ -21320,15 +21391,319 @@
 	}
 
 /***/ },
-/* 169 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(160)();
 	// imports
 
 
 	// module
 	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \r\n\t v2.0 | 20110126\r\n\t License: none (public domain)\r\n*/\nhtml {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nhtml, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after {\n  content: '';\n  content: none; }\n\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ndiv {\n  position: relative; }\n\nbody {\n  background: url(\"/images/bg.jpg\");\n  background-attachment: fixed; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(173);
+
+	var Nav = (function (_React$Component) {
+		_inherits(Nav, _React$Component);
+
+		function Nav() {
+			_classCallCheck(this, Nav);
+
+			_get(Object.getPrototypeOf(Nav.prototype), 'constructor', this).apply(this, arguments);
+		}
+
+		_createClass(Nav, [{
+			key: 'render',
+			value: function render() {
+				return _react2['default'].createElement(
+					'div',
+					{ className: 'nav' },
+					_react2['default'].createElement(
+						'div',
+						{ className: 'header header--absolute' },
+						_react2['default'].createElement(
+							'div',
+							{ className: 'header__menu' },
+							_react2['default'].createElement(
+								'span',
+								{ className: 'header__link' },
+								'Close'
+							),
+							_react2['default'].createElement(
+								'div',
+								{ className: 'header__hamburger' },
+								_react2['default'].createElement('div', { className: 'header__line' }),
+								_react2['default'].createElement('div', { className: 'header__line' }),
+								_react2['default'].createElement('div', { className: 'header__line' })
+							)
+						)
+					),
+					_react2['default'].createElement(
+						'div',
+						{ className: 'nav__list' },
+						_react2['default'].createElement(
+							'ul',
+							{ className: 'nav__level' },
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'Home'
+								)
+							),
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'About'
+								)
+							),
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'Training'
+								),
+								_react2['default'].createElement(
+									'ul',
+									null,
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Sub Category'
+										)
+									)
+								)
+							),
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'Coaching'
+								),
+								_react2['default'].createElement(
+									'ul',
+									null,
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Sub Category'
+										)
+									)
+								)
+							),
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'News'
+								)
+							),
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'Contact'
+								),
+								_react2['default'].createElement(
+									'ul',
+									null,
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Instagram'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Facebook'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#' },
+											'Twitter'
+										)
+									)
+								)
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return Nav;
+	})(_react2['default'].Component);
+
+	;
+
+	exports['default'] = Nav;
+	module.exports = exports['default'];
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(174);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(161)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./nav.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./nav.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(160)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".nav__link {\n  text-decoration: none;\n  transition: color 300ms; }\n\n.nav {\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  background: yellow;\n  opacity: 0.75;\n  z-index: 100; }\n  .nav__link {\n    color: black;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 0.9rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n", ""]);
 
 	// exports
 

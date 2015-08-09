@@ -1,0 +1,86 @@
+@import "../config/fonts.scss";
+
+.header
+{
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100%;
+padding: 20px;
+z-index: 50;
+height: 117px;
+
+	&--absolute
+	{
+	position: absolute;
+	}
+	
+	&__logo
+	{
+	float: left;
+	}
+
+	&__menu
+	{
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@include font-input;
+
+		&:hover
+		{
+		color: yellow;
+
+			/**
+			 * TODO: Too coupled? Bad
+			 */
+			.header__line, .header__line:before
+			{
+			background: yellow;
+			}
+		}
+	}
+
+	&__link
+	{
+	transition: color 300ms;
+	}
+
+	&__hamburger
+	{
+	width: 20px;
+	height: 12px;
+	float: right;
+	margin: 1px 0px 0px 20px;
+	}
+
+	&__line
+	{
+	width: 16px;
+	float: right;
+	height: 2px;
+	background: black;
+	margin-top: 3px;
+	transition: background 300ms;
+
+		&:first-child
+		{
+		margin-top: 0px;
+		}
+
+		&:before
+		{
+		content: "";
+		position: absolute;
+		left: -4px;
+		top: 0px;
+		background: black;
+		height: 2px;
+		width: 3px;
+		transition: background 300ms;
+		}
+	}
+}

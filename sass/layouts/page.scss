@@ -22,20 +22,14 @@ transform: rotate(45deg);
 transition: border 300ms;
 }
 
-@mixin __page
+.page
 {
 height: 100vh;
 width: 100%;
 background-size: cover;
-}
-
-.page
-{
-@include __page;
 
 	&--extend
 	{
-	@include __page;
 	min-height: 100vh;
 	}
 

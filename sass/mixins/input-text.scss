@@ -1,32 +1,33 @@
-@mixin input-text($margin) {
-border-width: 0px 0px 2px 0px;
-border-color: black;
-background: none;
-transition: border 300ms;
-width: 100%;
-color: black;
-padding: 5px 0px;
-
-@if $margin != '0px' {
-	margin: $margin;
-}
-
-	&::-webkit-input-placeholder
+@mixin input-text($margin)
 	{
+	border-width: 0px 0px 2px 0px;
+	border-color: black;
+	background: none;
+	transition: border 300ms;
+	width: 100%;
 	color: black;
-	opacity: 1;
-	}
-
-	&:hover, &:focus
-	{
-	border-color: yellow;
-	outline: none;
-	}
+	padding: 5px 0px;
 
 	@if $margin != '0px' {
-		&:first-child
-		{
-		margin-top: 0px;
-		}
+		margin: $margin;
 	}
+
+		&::-webkit-input-placeholder
+		{
+		color: black;
+		opacity: 1;
+		}
+
+		&:hover, &:focus
+		{
+		border-color: yellow;
+		outline: none;
+		}
+
+		@if $margin != '0px' {
+			&:first-child
+			{
+			margin-top: 0px;
+			}
+		}
 }
