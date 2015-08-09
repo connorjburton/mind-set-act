@@ -2,12 +2,20 @@
 <html>
 	<head>
 	    <meta charset="UTF-8">
-	    <title>webpack ES6 demo</title>
+	    <title>Mind Set Act</title>
 
-	    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Cousine:700' rel='stylesheet' type='text/css'>
+
+	    <!--[if IE]>
+	   		<link rel="stylesheet" href="/sass/vendors/fontawesome/css/font-awesome.min.css">
+	 	<![endif]-->
 	</head>
 
 	<body>
 		<script src="/build/js/bundle.js"></script>
+
+		<!--[if !IE]> -->
+        <link rel="stylesheet" href="/sass/vendors/fontawesome/css/font-awesome.min.css" lazyload>
+		<!-- <![endif]-->
 	</body>
 </html>

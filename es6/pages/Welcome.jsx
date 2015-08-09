@@ -1,13 +1,13 @@
 import React from 'react';
-require('../../sass/pages/page.scss');
+require('../../sass/layouts/page.scss');
 
 class Welcome extends React.Component {
 	render() {
 		return (
-			<div className="page welcome">
+			<div className="page">
 				<div className="page__center">
-					<div className="page__heading">
-						<h1 className="page__heading__text">Welcome.</h1>
+					<div className="page__head">
+						<h1 className="page__heading">Welcome.</h1>
 					</div>
 
 					<div className="page__body">

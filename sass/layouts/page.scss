@@ -1,0 +1,196 @@
+@import "../config/fonts.scss";
+@import "../mixins/faded-borders.scss";
+@import "../mixins/link.scss";
+@import "../mixins/input-text.scss";
+
+@mixin __edge--active
+{
+border: 2px solid yellow;
+
+@include faded-borders(yellow);
+}
+
+@mixin __edge
+{
+border: 2px solid black;
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0px;
+top: 0px;
+transform: rotate(45deg);
+transition: border 300ms;
+}
+
+@mixin __page
+{
+height: 100vh;
+width: 100%;
+background-size: cover;
+}
+
+.page
+{
+@include __page;
+
+	&--extend
+	{
+	@include __page;
+	min-height: 100vh;
+	}
+
+	&__head
+	{
+	border: 2px solid black;
+	margin: 10px auto;
+	padding: 10px 0px;
+	width: 80%;
+
+	@include faded-borders(black);
+	}
+
+	&__heading
+	{
+	@include font-heading;
+	}
+
+	&__body
+	{
+	letter-spacing: 1px;
+    line-height: 22px;
+    margin-top: 60px;
+
+    @include font-body;
+	}
+
+	&__center
+	{
+	width: 80%;
+	max-width: 950px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	text-align: center;
+	}
+
+	&__boxes
+	{
+	width: 100%;
+	text-align: center;
+	margin-top: 60px;
+	}
+
+	&__box
+	{
+	width: 100px;
+    height: 100px;
+	display: inline-block;
+	margin-left: 130px;
+	cursor: pointer;
+
+	@include font-heading;
+
+		&:first-child
+		{
+		margin-left: 0px;
+		}
+	}
+
+	&__box:hover &__edge
+	{
+	@include __edge--active;
+	}
+	
+	&__edge
+	{
+	@include __edge;
+	@include faded-borders(black);
+
+		&--active
+		{
+		@include __edge;
+		@include __edge--active;
+		}
+	}
+
+	&__diamond-text
+	{
+	transform: translateX(-50%) translateY(-50%);
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+	}
+
+
+	&__link
+	{
+	color: black;
+
+	@extend %link;
+		
+		&:hover
+		{
+		color: yellow;
+		}
+	}
+
+	&__form
+	{
+	margin-top: 40px;
+	}
+
+	&__input
+	{
+	margin-top: 20px;
+
+	@include input-text(40px 0px 0px);
+	@include font-input;
+
+		&--textarea
+		{
+		resize: none;
+		min-height: 125px;
+
+		@include input-text(40px 0px 0px);
+		@include font-input;
+		}
+	}
+
+	&__submit-wrapper
+	{
+	width: 200px;
+	margin: 40px auto 0px;
+	
+	@include faded-borders(black);
+
+		&:hover
+		{
+		@include faded-borders(yellow);
+
+			/**
+			 * TODO: Change this. Not sure best way
+			 * to do this in BEM
+			 */
+			.page__submit
+			{
+			border-color: yellow;
+			}
+		}
+	}
+
+	&__submit
+	{
+	width: 100%;
+	background: none;
+	border: 2px solid black;
+	padding: 5px 0px;
+	transition: border 300ms;
+	position: relative;
+	cursor: pointer;
+	z-index: 10;
+
+	@include font-input;
+	}
+}

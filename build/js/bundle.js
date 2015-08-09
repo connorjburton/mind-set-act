@@ -72,7 +72,11 @@
 
 	var _pagesAboutJsx2 = _interopRequireDefault(_pagesAboutJsx);
 
-	__webpack_require__(163);
+	var _pagesContactJsx = __webpack_require__(163);
+
+	var _pagesContactJsx2 = _interopRequireDefault(_pagesContactJsx);
+
+	__webpack_require__(168);
 
 	var App = (function (_React$Component) {
 		_inherits(App, _React$Component);
@@ -91,7 +95,8 @@
 					{ className: 'app' },
 					_react2['default'].createElement(_HeaderJsx2['default'], null),
 					_react2['default'].createElement(_pagesWelcomeJsx2['default'], null),
-					_react2['default'].createElement(_pagesAboutJsx2['default'], null)
+					_react2['default'].createElement(_pagesAboutJsx2['default'], null),
+					_react2['default'].createElement(_pagesContactJsx2['default'], null)
 				);
 			}
 		}]);
@@ -20566,16 +20571,16 @@
 			value: function render() {
 				return _react2['default'].createElement(
 					'div',
-					{ className: 'page welcome' },
+					{ className: 'page' },
 					_react2['default'].createElement(
 						'div',
 						{ className: 'page__center' },
 						_react2['default'].createElement(
 							'div',
-							{ className: 'page__heading' },
+							{ className: 'page__head' },
 							_react2['default'].createElement(
 								'h1',
-								{ className: 'page__heading__text' },
+								{ className: 'page__heading' },
 								'Welcome.'
 							)
 						),
@@ -20634,12 +20639,12 @@
 /* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(165)();
+	exports = module.exports = __webpack_require__(167)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".page {\n  height: 100vh;\n  width: 100%;\n  background-size: cover; }\n  .page .page__heading {\n    border: 2px solid black;\n    margin: 10px auto;\n    padding: 10px 0px;\n    width: 80%; }\n    .page .page__heading:before, .page .page__heading:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%);\n      transition: border 300ms; }\n    .page .page__heading:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5); }\n    .page .page__heading:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25); }\n  .page .page__heading__text {\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1.1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n  .page .page__body {\n    letter-spacing: 1px;\n    line-height: 22px;\n    margin-top: 60px;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 0.9rem; }\n  .page .page__center {\n    width: 80%;\n    max-width: 950px;\n    position: absolute;\n    top: 40%;\n    left: 50%;\n    transform: translateX(-50%) translateY(-50%);\n    text-align: center; }\n  .page .page__boxes {\n    width: 100%;\n    text-align: center;\n    margin-top: 60px; }\n  .page .page__boxes__box {\n    width: 100px;\n    height: 100px;\n    display: inline-block;\n    margin-left: 130px;\n    cursor: pointer;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1.1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n    .page .page__boxes__box:first-child {\n      margin-left: 0px; }\n  .page .page__boxes__box:hover .page__boxes__edge {\n    border: 2px solid yellow; }\n    .page .page__boxes__box:hover .page__boxes__edge:before, .page .page__boxes__box:hover .page__boxes__edge:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%);\n      transition: border 300ms; }\n    .page .page__boxes__box:hover .page__boxes__edge:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(255, 255, 0, 0.5); }\n    .page .page__boxes__box:hover .page__boxes__edge:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(255, 255, 0, 0.25); }\n  .page .page__boxes__edge {\n    border: 2px solid black;\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    left: 0px;\n    top: 0px;\n    transform: rotate(45deg);\n    transition: border 300ms; }\n    .page .page__boxes__edge:before, .page .page__boxes__edge:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%);\n      transition: border 300ms; }\n    .page .page__boxes__edge:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5); }\n    .page .page__boxes__edge:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25); }\n  .page .page__boxes__box__text {\n    transform: translateX(-50%) translateY(-50%);\n    display: block;\n    position: absolute;\n    left: 50%;\n    top: 50%; }\n", ""]);
+	exports.push([module.id, ".page__link {\n  text-decoration: none;\n  transition: color 300ms; }\n\n.page {\n  height: 100vh;\n  width: 100%;\n  background-size: cover; }\n  .page--extend {\n    height: 100vh;\n    width: 100%;\n    background-size: cover;\n    min-height: 100vh; }\n  .page__head {\n    border: 2px solid black;\n    margin: 10px auto;\n    padding: 10px 0px;\n    width: 80%; }\n    .page__head:before, .page__head:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__head:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__head:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n  .page__heading {\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1.1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n  .page__body {\n    letter-spacing: 1px;\n    line-height: 22px;\n    margin-top: 60px;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 0.9rem; }\n  .page__center {\n    width: 80%;\n    max-width: 950px;\n    position: absolute;\n    top: 40%;\n    left: 50%;\n    transform: translateX(-50%) translateY(-50%);\n    text-align: center; }\n  .page__boxes {\n    width: 100%;\n    text-align: center;\n    margin-top: 60px; }\n  .page__box {\n    width: 100px;\n    height: 100px;\n    display: inline-block;\n    margin-left: 130px;\n    cursor: pointer;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1.1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n    .page__box:first-child {\n      margin-left: 0px; }\n  .page__box:hover .page__edge {\n    border: 2px solid yellow; }\n    .page__box:hover .page__edge:before, .page__box:hover .page__edge:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__box:hover .page__edge:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(255, 255, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__box:hover .page__edge:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(255, 255, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n  .page__edge {\n    border: 2px solid black;\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    left: 0px;\n    top: 0px;\n    transform: rotate(45deg);\n    transition: border 300ms; }\n    .page__edge:before, .page__edge:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__edge:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__edge:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n    .page__edge--active {\n      border: 2px solid black;\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      left: 0px;\n      top: 0px;\n      transform: rotate(45deg);\n      transition: border 300ms;\n      border: 2px solid yellow; }\n      .page__edge--active:before, .page__edge--active:after {\n        content: \"\";\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translateY(-50%) translateX(-50%); }\n      .page__edge--active:before {\n        width: calc(100% + 15px);\n        height: calc(100% + 15px);\n        border: 2px solid rgba(255, 255, 0, 0.5);\n        transition: border 300ms ease 0.1s; }\n      .page__edge--active:after {\n        width: calc(100% + 25px);\n        height: calc(100% + 25px);\n        border: 2px solid rgba(255, 255, 0, 0.25);\n        transition: border 300ms ease 0.2s; }\n  .page__diamond-text {\n    transform: translateX(-50%) translateY(-50%);\n    display: block;\n    position: absolute;\n    left: 50%;\n    top: 50%; }\n  .page__link {\n    color: black; }\n    .page__link:hover {\n      color: yellow; }\n  .page__form {\n    margin-top: 40px; }\n  .page__input {\n    margin-top: 20px;\n    border-width: 0px 0px 2px 0px;\n    border-color: black;\n    background: none;\n    transition: border 300ms;\n    width: 100%;\n    color: black;\n    padding: 5px 0px;\n    margin: 40px 0px 0px;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n    .page__input::-webkit-input-placeholder {\n      color: black;\n      opacity: 1; }\n    .page__input:hover, .page__input:focus {\n      border-color: yellow;\n      outline: none; }\n    .page__input:first-child {\n      margin-top: 0px; }\n    .page__input--textarea {\n      resize: none;\n      min-height: 125px;\n      border-width: 0px 0px 2px 0px;\n      border-color: black;\n      background: none;\n      transition: border 300ms;\n      width: 100%;\n      color: black;\n      padding: 5px 0px;\n      margin: 40px 0px 0px;\n      font-family: 'Montserrat', sans-serif;\n      font-weight: 700;\n      font-size: 1rem;\n      text-transform: uppercase;\n      letter-spacing: 8px; }\n      .page__input--textarea::-webkit-input-placeholder {\n        color: black;\n        opacity: 1; }\n      .page__input--textarea:hover, .page__input--textarea:focus {\n        border-color: yellow;\n        outline: none; }\n      .page__input--textarea:first-child {\n        margin-top: 0px; }\n  .page__submit-wrapper {\n    width: 200px;\n    margin: 40px auto 0px; }\n    .page__submit-wrapper:before, .page__submit-wrapper:after {\n      content: \"\";\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateY(-50%) translateX(-50%); }\n    .page__submit-wrapper:before {\n      width: calc(100% + 15px);\n      height: calc(100% + 15px);\n      border: 2px solid rgba(0, 0, 0, 0.5);\n      transition: border 300ms ease 0.1s; }\n    .page__submit-wrapper:after {\n      width: calc(100% + 25px);\n      height: calc(100% + 25px);\n      border: 2px solid rgba(0, 0, 0, 0.25);\n      transition: border 300ms ease 0.2s; }\n    .page__submit-wrapper:hover {\n      /**\r\n\t\t\t * TODO: Change this. Not sure best way\r\n\t\t\t * to do this in BEM\r\n\t\t\t */ }\n      .page__submit-wrapper:hover:before, .page__submit-wrapper:hover:after {\n        content: \"\";\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translateY(-50%) translateX(-50%); }\n      .page__submit-wrapper:hover:before {\n        width: calc(100% + 15px);\n        height: calc(100% + 15px);\n        border: 2px solid rgba(255, 255, 0, 0.5);\n        transition: border 300ms ease 0.1s; }\n      .page__submit-wrapper:hover:after {\n        width: calc(100% + 25px);\n        height: calc(100% + 25px);\n        border: 2px solid rgba(255, 255, 0, 0.25);\n        transition: border 300ms ease 0.2s; }\n      .page__submit-wrapper:hover\n.page__submit {\n        border-color: yellow; }\n  .page__submit {\n    width: 100%;\n    background: none;\n    border: 2px solid black;\n    padding: 5px 0px;\n    transition: border 300ms;\n    position: relative;\n    cursor: pointer;\n    z-index: 10;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 1rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n", ""]);
 
 	// exports
 
@@ -20907,16 +20912,16 @@
 			value: function render() {
 				return _react2["default"].createElement(
 					"div",
-					{ className: "page welcome" },
+					{ className: "page" },
 					_react2["default"].createElement(
 						"div",
 						{ className: "page__center" },
 						_react2["default"].createElement(
 							"div",
-							{ className: "page__heading" },
+							{ className: "page__head" },
 							_react2["default"].createElement(
 								"h1",
-								{ className: "page__heading__text" },
+								{ className: "page__heading" },
 								"About Us."
 							)
 						),
@@ -20940,31 +20945,31 @@
 							{ className: "page__boxes" },
 							_react2["default"].createElement(
 								"div",
-								{ className: "page__boxes__box" },
-								_react2["default"].createElement("div", { className: "page__boxes__edge" }),
+								{ className: "page__box" },
+								_react2["default"].createElement("div", { className: "page__edge--active" }),
 								_react2["default"].createElement(
 									"span",
-									{ className: "page__boxes__box__text" },
+									{ className: "page__diamond-text" },
 									"Mind."
 								)
 							),
 							_react2["default"].createElement(
 								"div",
-								{ className: "page__boxes__box" },
-								_react2["default"].createElement("div", { className: "page__boxes__edge" }),
+								{ className: "page__box" },
+								_react2["default"].createElement("div", { className: "page__edge" }),
 								_react2["default"].createElement(
 									"span",
-									{ className: "page__boxes__box__text" },
+									{ className: "page__diamond-text" },
 									"Set."
 								)
 							),
 							_react2["default"].createElement(
 								"div",
-								{ className: "page__boxes__box" },
-								_react2["default"].createElement("div", { className: "page__boxes__edge" }),
+								{ className: "page__box" },
+								_react2["default"].createElement("div", { className: "page__edge" }),
 								_react2["default"].createElement(
 									"span",
-									{ className: "page__boxes__box__text" },
+									{ className: "page__diamond-text" },
 									"Act."
 								)
 							)
@@ -20986,10 +20991,220 @@
 /* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _FooterJsx = __webpack_require__(164);
+
+	var _FooterJsx2 = _interopRequireDefault(_FooterJsx);
+
+	var Contact = (function (_React$Component) {
+		_inherits(Contact, _React$Component);
+
+		function Contact() {
+			_classCallCheck(this, Contact);
+
+			_get(Object.getPrototypeOf(Contact.prototype), 'constructor', this).apply(this, arguments);
+		}
+
+		_createClass(Contact, [{
+			key: 'render',
+			value: function render() {
+				return _react2['default'].createElement(
+					'div',
+					{ className: 'page--extend' },
+					_react2['default'].createElement(
+						'div',
+						{ className: 'page__center' },
+						_react2['default'].createElement(
+							'div',
+							{ className: 'page__head' },
+							_react2['default'].createElement(
+								'h1',
+								{ className: 'page__heading' },
+								'Contact Us.'
+							)
+						),
+						_react2['default'].createElement(
+							'div',
+							{ className: 'page__body' },
+							_react2['default'].createElement(
+								'p',
+								null,
+								'Fancy a chat? please call - +31 [0] 758 559 147 or email - ',
+								_react2['default'].createElement(
+									'a',
+									{ className: 'page__link', href: 'mailto:hello@mindsetact.nl' },
+									'hello@mindsetact.nl'
+								),
+								_react2['default'].createElement('br', null),
+								_react2['default'].createElement('br', null),
+								'If you’d prefer to leave a message please use the contact form below and we will get back to you.'
+							)
+						),
+						_react2['default'].createElement(
+							'div',
+							{ className: 'page__form' },
+							_react2['default'].createElement('input', { type: 'text', className: 'page__input', placeholder: 'Name.' }),
+							_react2['default'].createElement('input', { type: 'text', className: 'page__input', placeholder: 'Telephone.' }),
+							_react2['default'].createElement('input', { type: 'text', className: 'page__input', placeholder: 'Company.' }),
+							_react2['default'].createElement('textarea', { className: 'page__input--textarea', placeholder: 'Message.' }),
+							_react2['default'].createElement(
+								'div',
+								{ className: 'page__submit-wrapper' },
+								_react2['default'].createElement('input', { type: 'submit', className: 'page__submit', value: 'Send.' })
+							)
+						)
+					),
+					_react2['default'].createElement(_FooterJsx2['default'], null)
+				);
+			}
+		}]);
+
+		return Contact;
+	})(_react2['default'].Component);
+
+	;
+
+	exports['default'] = Contact;
+	module.exports = exports['default'];
+
+/***/ },
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(165);
+
+	var Footer = (function (_React$Component) {
+		_inherits(Footer, _React$Component);
+
+		function Footer() {
+			_classCallCheck(this, Footer);
+
+			_get(Object.getPrototypeOf(Footer.prototype), 'constructor', this).apply(this, arguments);
+		}
+
+		_createClass(Footer, [{
+			key: 'render',
+			value: function render() {
+				return _react2['default'].createElement(
+					'div',
+					{ className: 'footer' },
+					_react2['default'].createElement(
+						'div',
+						{ className: 'footer__language' },
+						_react2['default'].createElement(
+							'a',
+							{ className: 'footer__link', href: '#' },
+							'ENG.'
+						),
+						_react2['default'].createElement(
+							'a',
+							{ className: 'footer__link', href: '#' },
+							'NL.'
+						)
+					),
+					_react2['default'].createElement(
+						'div',
+						{ className: 'footer__details' },
+						_react2['default'].createElement(
+							'span',
+							{ className: 'footer__sep' },
+							'©',
+							new Date().getFullYear(),
+							' Mind Set Act'
+						),
+						_react2['default'].createElement(
+							'span',
+							{ className: 'footer__sep' },
+							'All Rights Reserved'
+						),
+						_react2['default'].createElement(
+							'span',
+							{ className: 'footer__sep' },
+							_react2['default'].createElement(
+								'a',
+								{ className: 'footer__credits-link', href: '#' },
+								'Credits'
+							)
+						)
+					),
+					_react2['default'].createElement(
+						'div',
+						{ className: 'footer__social' },
+						_react2['default'].createElement(
+							'a',
+							{ href: '#', className: 'footer__link' },
+							_react2['default'].createElement('i', { className: 'fa fa-instagram fa-2x' })
+						),
+						_react2['default'].createElement(
+							'a',
+							{ href: '#', className: 'footer__link' },
+							_react2['default'].createElement('i', { className: 'fa fa-twitter fa-2x' })
+						),
+						_react2['default'].createElement(
+							'a',
+							{ href: '#', className: 'footer__link' },
+							_react2['default'].createElement('i', { className: 'fa fa-facebook fa-2x' })
+						)
+					)
+				);
+			}
+		}]);
+
+		return Footer;
+	})(_react2['default'].Component);
+
+	;
+
+	exports['default'] = Footer;
+	module.exports = exports['default'];
+
+/***/ },
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(164);
+	var content = __webpack_require__(166);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(161)(content, {});
@@ -20998,8 +21213,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./base.scss", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./base.scss");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./footer.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./footer.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21009,21 +21224,21 @@
 	}
 
 /***/ },
-/* 164 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(165)();
+	exports = module.exports = __webpack_require__(167)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \r\n\t v2.0 | 20110126\r\n\t License: none (public domain)\r\n*/\nhtml {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nhtml, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after {\n  content: '';\n  content: none; }\n\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ndiv {\n  position: relative; }\n\nbody {\n  background: url(\"/images/bg.jpg\");\n  background-attachment: fixed; }\n", ""]);
+	exports.push([module.id, ".footer__link, .footer__credits-link {\n  text-decoration: none;\n  transition: color 300ms; }\n\n.footer {\n  width: 100%;\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  padding: 20px 40px; }\n  .footer__link {\n    color: black;\n    margin-left: 20px;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 0.9rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n    .footer__link:first-child {\n      margin-left: 0px; }\n    .footer__link:hover {\n      color: yellow; }\n  .footer__details {\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    transform: translateX(-50%) translateY(-50%);\n    font-family: 'Cousine', serif;\n    font-weight: 700;\n    font-size: 0.7rem;\n    letter-spacing: 2px; }\n  .footer__credits-link {\n    color: black; }\n    .footer__credits-link:hover {\n      color: yellow; }\n  .footer__sep {\n    border-right: 1px solid black;\n    padding: 0px 10px; }\n    .footer__sep:first-child {\n      padding-left: 0px; }\n    .footer__sep:last-child {\n      padding-right: 0px;\n      border-right: 0px; }\n  .footer__language {\n    position: absolute;\n    left: 40px;\n    top: 50%;\n    transform: translateY(-50%); }\n  .footer__social {\n    float: right; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 165 */
+/* 167 */
 /***/ function(module, exports) {
 
 	/*
@@ -21076,6 +21291,46 @@
 		};
 		return list;
 	};
+
+
+/***/ },
+/* 168 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(169);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(161)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./base.scss", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./base.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 169 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(167)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \r\n\t v2.0 | 20110126\r\n\t License: none (public domain)\r\n*/\nhtml {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nhtml, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after {\n  content: '';\n  content: none; }\n\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ndiv {\n  position: relative; }\n\nbody {\n  background: url(\"/images/bg.jpg\");\n  background-attachment: fixed; }\n", ""]);
+
+	// exports
 
 
 /***/ }

@@ -1,0 +1,82 @@
+@import "../config/fonts.scss";
+@import "../mixins/link.scss";
+
+.footer
+{
+width: 100%;
+position: absolute;
+bottom: 0px;
+left: 0px;
+padding: 20px 40px;
+
+	&__link
+	{
+	color: black;
+	margin-left: 20px;
+
+	@include font-language-link;
+	@extend %link;
+
+		&:first-child
+		{
+		margin-left: 0px;
+		}
+		
+		&:hover
+		{
+		color: yellow;
+		}
+	}
+
+	&__details
+	{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+
+	@include font-credits;
+	}
+
+	&__credits-link
+	{
+	color: black;
+
+	@extend %link;
+
+		&:hover
+		{
+		color: yellow;
+		}
+	}
+
+	&__sep
+	{
+	border-right: 1px solid black;
+	padding: 0px 10px;
+
+		&:first-child
+		{
+		padding-left: 0px;
+		}
+
+		&:last-child
+		{
+		padding-right: 0px;
+		border-right: 0px;
+		}
+	}
+
+	&__language
+	{
+	position: absolute;
+	left: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+	}
+
+	&__social
+	{
+	float: right;
+	}
+}

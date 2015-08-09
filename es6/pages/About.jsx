@@ -3,10 +3,10 @@ import React from 'react';
 class About extends React.Component {
 	render() {
 		return (
-			<div className="page welcome">
+			<div className="page">
 				<div className="page__center">
-					<div className="page__heading">
-						<h1 className="page__heading__text">About Us.</h1>
+					<div className="page__head">
+						<h1 className="page__heading">About Us.</h1>
 					</div>
 
 					<div className="page__body">
@@ -19,17 +19,17 @@ class About extends React.Component {
 					</div>
 
 					<div className="page__boxes">
-						<div className="page__boxes__box">
-							<div className="page__boxes__edge"></div>
-							<span className="page__boxes__box__text">Mind.</span>
+						<div className="page__box">
+							<div className="page__edge--active"></div>
+							<span className="page__diamond-text">Mind.</span>
 						</div>
-						<div className="page__boxes__box">
-							<div className="page__boxes__edge"></div>
-							<span className="page__boxes__box__text">Set.</span>
+						<div className="page__box">
+							<div className="page__edge"></div>
+							<span className="page__diamond-text">Set.</span>
 						</div>
-						<div className="page__boxes__box">
-							<div className="page__boxes__edge"></div>
-							<span className="page__boxes__box__text">Act.</span>
+						<div className="page__box">
+							<div className="page__edge"></div>
+							<span className="page__diamond-text">Act.</span>
 						</div>
 					</div>
 				</div>
