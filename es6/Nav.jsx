@@ -7,7 +7,7 @@ class Nav extends React.Component {
 			<div className="nav">
 				<div className="header header--absolute">
 					<div className="header__menu">
-						<span className="header__link">Close</span>
+						<span className="header__link"  onClick={this.props.handleMenuClick.bind(null, false)}>Close</span>
 
 						<div className="header__hamburger">
 							<div className="header__line"></div>
@@ -24,30 +24,30 @@ class Nav extends React.Component {
 						<li>
 							<a href="#" className="nav__link">Training</a>
 							<ul>
-								<li><a href="#">Sub Category</a></li>
-								<li><a href="#">Sub Category</a></li>
-								<li><a href="#">Sub Category</a></li>
-								<li><a href="#">Sub Category</a></li>
-								<li><a href="#">Sub Category</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Sub Category</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Sub Category</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Sub Category</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Sub Category</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Sub Category</a></li>
 							</ul>
 						</li>
 						<li>
 							<a href="#" className="nav__link">Coaching</a>
 							<ul>
-								<li><a href="#">Sub Category</a></li>
-								<li><a href="#">Sub Category</a></li>
-								<li><a href="#">Sub Category</a></li>
-								<li><a href="#">Sub Category</a></li>
-								<li><a href="#">Sub Category</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Sub Category</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Sub Category</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Sub Category</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Sub Category</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Sub Category</a></li>
 							</ul>
 						</li>
 						<li><a href="#" className="nav__link">News</a></li>
 						<li>
 							<a href="#" className="nav__link">Contact</a>
 							<ul>
-								<li><a href="#">Instagram</a></li>
-								<li><a href="#">Facebook</a></li>
-								<li><a href="#">Twitter</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Instagram</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Facebook</a></li>
+								<li><a href="#" className="nav__link nav__link--sub">Twitter</a></li>
 							</ul>
 						</li>
 					</ul>

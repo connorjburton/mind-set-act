@@ -15,8 +15,27 @@ z-index: 100;
 	&__link
 	{
 	color: black;
+	//compensating for letter spacing
+	margin-right: -8px;
+	margin-top: 10px;
+	display: inline-block;
 
 	@include font-nav;
 	@extend %link;
+
+		&--sub
+		{
+		//compensating for letter spacing
+		margin-right: -4px;
+
+		@include font-nav-sub;
+		}
+	}
+
+	&__list
+	{
+	float: right;
+	margin: 125px 20px 0px 0px;
+	text-align: right;
 	}
 }

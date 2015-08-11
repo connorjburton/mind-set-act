@@ -7,16 +7,32 @@ import Contact from './pages/Contact.jsx';
 require('../sass/base.scss');
 
 class App extends React.Component {
+	_bind(...methods) {
+		methods.forEach((method) => this[method] = this[method].bind(this));
+	}
+	constructor() {
+		super();
+		this.state = {
+			navOpen: false
+		}
+
+		this._bind('handleMenuClick');
+	}
 	render() {
 		return (
 			<div className="app">
-				<Header />
-				<Nav />
+				<Header handleMenuClick={this.handleMenuClick} />
+				{this.state.navOpen ? <Nav handleMenuClick={this.handleMenuClick} /> : null}
 				<Welcome />
 				<About />
 				<Contact />
 			</div>
 		);
+	}
+	handleMenuClick(isOpen) {
+		this.setState({
+			navOpen: isOpen
+		});
 	}
 };
 

@@ -6,11 +6,11 @@ class Header extends React.Component {
 		return (
 			<div className="header">
 				<div className="header__logo">
-					<img src="/images/logo.png" />
+					<a href="/"><img src="/images/logo.png" /></a>
 				</div>
-
+				
 				<div className="header__menu">
-					<span className="header__link">Menu</span>
+					<span className="header__link" onClick={this.props.handleMenuClick.bind(null, true)}>Menu</span>
 					<div className="header__hamburger">
 						<div className="header__line"></div>
 						<div className="header__line"></div>

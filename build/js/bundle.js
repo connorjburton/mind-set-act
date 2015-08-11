@@ -64,31 +64,51 @@
 
 	var _HeaderJsx2 = _interopRequireDefault(_HeaderJsx);
 
-	var _NavJsx = __webpack_require__(172);
+	var _NavJsx = __webpack_require__(162);
 
 	var _NavJsx2 = _interopRequireDefault(_NavJsx);
 
-	var _pagesWelcomeJsx = __webpack_require__(162);
+	var _pagesWelcomeJsx = __webpack_require__(165);
 
 	var _pagesWelcomeJsx2 = _interopRequireDefault(_pagesWelcomeJsx);
 
-	var _pagesAboutJsx = __webpack_require__(165);
+	var _pagesAboutJsx = __webpack_require__(168);
 
 	var _pagesAboutJsx2 = _interopRequireDefault(_pagesAboutJsx);
 
-	var _pagesContactJsx = __webpack_require__(166);
+	var _pagesContactJsx = __webpack_require__(169);
 
 	var _pagesContactJsx2 = _interopRequireDefault(_pagesContactJsx);
 
-	__webpack_require__(170);
+	__webpack_require__(173);
 
 	var App = (function (_React$Component) {
 		_inherits(App, _React$Component);
 
+		_createClass(App, [{
+			key: '_bind',
+			value: function _bind() {
+				var _this = this;
+
+				for (var _len = arguments.length, methods = Array(_len), _key = 0; _key < _len; _key++) {
+					methods[_key] = arguments[_key];
+				}
+
+				methods.forEach(function (method) {
+					return _this[method] = _this[method].bind(_this);
+				});
+			}
+		}]);
+
 		function App() {
 			_classCallCheck(this, App);
 
-			_get(Object.getPrototypeOf(App.prototype), 'constructor', this).apply(this, arguments);
+			_get(Object.getPrototypeOf(App.prototype), 'constructor', this).call(this);
+			this.state = {
+				navOpen: false
+			};
+
+			this._bind('handleMenuClick');
 		}
 
 		_createClass(App, [{
@@ -97,12 +117,19 @@
 				return _react2['default'].createElement(
 					'div',
 					{ className: 'app' },
-					_react2['default'].createElement(_HeaderJsx2['default'], null),
-					_react2['default'].createElement(_NavJsx2['default'], null),
+					_react2['default'].createElement(_HeaderJsx2['default'], { handleMenuClick: this.handleMenuClick }),
+					this.state.navOpen ? _react2['default'].createElement(_NavJsx2['default'], { handleMenuClick: this.handleMenuClick }) : null,
 					_react2['default'].createElement(_pagesWelcomeJsx2['default'], null),
 					_react2['default'].createElement(_pagesAboutJsx2['default'], null),
 					_react2['default'].createElement(_pagesContactJsx2['default'], null)
 				);
+			}
+		}, {
+			key: 'handleMenuClick',
+			value: function handleMenuClick(isOpen) {
+				this.setState({
+					navOpen: isOpen
+				});
 			}
 		}]);
 
@@ -20532,14 +20559,18 @@
 					_react2['default'].createElement(
 						'div',
 						{ className: 'header__logo' },
-						_react2['default'].createElement('img', { src: '/images/logo.png' })
+						_react2['default'].createElement(
+							'a',
+							{ href: '/' },
+							_react2['default'].createElement('img', { src: '/images/logo.png' })
+						)
 					),
 					_react2['default'].createElement(
 						'div',
 						{ className: 'header__menu' },
 						_react2['default'].createElement(
 							'span',
-							{ className: 'header__link' },
+							{ className: 'header__link', onClick: this.props.handleMenuClick.bind(null, true) },
 							'Menu'
 						),
 						_react2['default'].createElement(
@@ -20909,6 +20940,310 @@
 
 	__webpack_require__(163);
 
+	var Nav = (function (_React$Component) {
+		_inherits(Nav, _React$Component);
+
+		function Nav() {
+			_classCallCheck(this, Nav);
+
+			_get(Object.getPrototypeOf(Nav.prototype), 'constructor', this).apply(this, arguments);
+		}
+
+		_createClass(Nav, [{
+			key: 'render',
+			value: function render() {
+				return _react2['default'].createElement(
+					'div',
+					{ className: 'nav' },
+					_react2['default'].createElement(
+						'div',
+						{ className: 'header header--absolute' },
+						_react2['default'].createElement(
+							'div',
+							{ className: 'header__menu' },
+							_react2['default'].createElement(
+								'span',
+								{ className: 'header__link', onClick: this.props.handleMenuClick.bind(null, false) },
+								'Close'
+							),
+							_react2['default'].createElement(
+								'div',
+								{ className: 'header__hamburger' },
+								_react2['default'].createElement('div', { className: 'header__line' }),
+								_react2['default'].createElement('div', { className: 'header__line' }),
+								_react2['default'].createElement('div', { className: 'header__line' })
+							)
+						)
+					),
+					_react2['default'].createElement(
+						'div',
+						{ className: 'nav__list' },
+						_react2['default'].createElement(
+							'ul',
+							{ className: 'nav__level' },
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'Home'
+								)
+							),
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'About'
+								)
+							),
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'Training'
+								),
+								_react2['default'].createElement(
+									'ul',
+									null,
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Sub Category'
+										)
+									)
+								)
+							),
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'Coaching'
+								),
+								_react2['default'].createElement(
+									'ul',
+									null,
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Sub Category'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Sub Category'
+										)
+									)
+								)
+							),
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'News'
+								)
+							),
+							_react2['default'].createElement(
+								'li',
+								null,
+								_react2['default'].createElement(
+									'a',
+									{ href: '#', className: 'nav__link' },
+									'Contact'
+								),
+								_react2['default'].createElement(
+									'ul',
+									null,
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Instagram'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Facebook'
+										)
+									),
+									_react2['default'].createElement(
+										'li',
+										null,
+										_react2['default'].createElement(
+											'a',
+											{ href: '#', className: 'nav__link nav__link--sub' },
+											'Twitter'
+										)
+									)
+								)
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return Nav;
+	})(_react2['default'].Component);
+
+	;
+
+	exports['default'] = Nav;
+	module.exports = exports['default'];
+
+/***/ },
+/* 163 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(164);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(161)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./nav.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./nav.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(160)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".nav__link {\n  text-decoration: none;\n  transition: color 300ms; }\n\n.nav {\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  background: yellow;\n  opacity: 0.75;\n  z-index: 100; }\n  .nav__link {\n    color: black;\n    margin-right: -8px;\n    margin-top: 10px;\n    display: inline-block;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 0.9rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n    .nav__link--sub {\n      margin-right: -4px;\n      font-family: 'Montserrat', sans-serif;\n      font-weight: 700;\n      font-size: 0.7rem;\n      text-transform: uppercase;\n      letter-spacing: 4px; }\n  .nav__list {\n    float: right;\n    margin: 125px 20px 0px 0px;\n    text-align: right; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(166);
+
 	var Welcome = (function (_React$Component) {
 		_inherits(Welcome, _React$Component);
 
@@ -20962,13 +21297,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 163 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(164);
+	var content = __webpack_require__(167);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(161)(content, {});
@@ -20988,7 +21323,7 @@
 	}
 
 /***/ },
-/* 164 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(160)();
@@ -21002,7 +21337,7 @@
 
 
 /***/ },
-/* 165 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21115,7 +21450,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 166 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21138,7 +21473,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _FooterJsx = __webpack_require__(167);
+	var _FooterJsx = __webpack_require__(170);
 
 	var _FooterJsx2 = _interopRequireDefault(_FooterJsx);
 
@@ -21214,7 +21549,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 167 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21237,7 +21572,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(168);
+	__webpack_require__(171);
 
 	var Footer = (function (_React$Component) {
 		_inherits(Footer, _React$Component);
@@ -21325,13 +21660,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 168 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(169);
+	var content = __webpack_require__(172);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(161)(content, {});
@@ -21351,7 +21686,7 @@
 	}
 
 /***/ },
-/* 169 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(160)();
@@ -21365,13 +21700,13 @@
 
 
 /***/ },
-/* 170 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(171);
+	var content = __webpack_require__(174);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(161)(content, {});
@@ -21391,310 +21726,6 @@
 	}
 
 /***/ },
-/* 171 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(160)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \r\n\t v2.0 | 20110126\r\n\t License: none (public domain)\r\n*/\nhtml {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nhtml, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after {\n  content: '';\n  content: none; }\n\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ndiv {\n  position: relative; }\n\nbody {\n  background: url(\"/images/bg.jpg\");\n  background-attachment: fixed; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 172 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-		value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(173);
-
-	var Nav = (function (_React$Component) {
-		_inherits(Nav, _React$Component);
-
-		function Nav() {
-			_classCallCheck(this, Nav);
-
-			_get(Object.getPrototypeOf(Nav.prototype), 'constructor', this).apply(this, arguments);
-		}
-
-		_createClass(Nav, [{
-			key: 'render',
-			value: function render() {
-				return _react2['default'].createElement(
-					'div',
-					{ className: 'nav' },
-					_react2['default'].createElement(
-						'div',
-						{ className: 'header header--absolute' },
-						_react2['default'].createElement(
-							'div',
-							{ className: 'header__menu' },
-							_react2['default'].createElement(
-								'span',
-								{ className: 'header__link' },
-								'Close'
-							),
-							_react2['default'].createElement(
-								'div',
-								{ className: 'header__hamburger' },
-								_react2['default'].createElement('div', { className: 'header__line' }),
-								_react2['default'].createElement('div', { className: 'header__line' }),
-								_react2['default'].createElement('div', { className: 'header__line' })
-							)
-						)
-					),
-					_react2['default'].createElement(
-						'div',
-						{ className: 'nav__list' },
-						_react2['default'].createElement(
-							'ul',
-							{ className: 'nav__level' },
-							_react2['default'].createElement(
-								'li',
-								null,
-								_react2['default'].createElement(
-									'a',
-									{ href: '#', className: 'nav__link' },
-									'Home'
-								)
-							),
-							_react2['default'].createElement(
-								'li',
-								null,
-								_react2['default'].createElement(
-									'a',
-									{ href: '#', className: 'nav__link' },
-									'About'
-								)
-							),
-							_react2['default'].createElement(
-								'li',
-								null,
-								_react2['default'].createElement(
-									'a',
-									{ href: '#', className: 'nav__link' },
-									'Training'
-								),
-								_react2['default'].createElement(
-									'ul',
-									null,
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Sub Category'
-										)
-									),
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Sub Category'
-										)
-									),
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Sub Category'
-										)
-									),
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Sub Category'
-										)
-									),
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Sub Category'
-										)
-									)
-								)
-							),
-							_react2['default'].createElement(
-								'li',
-								null,
-								_react2['default'].createElement(
-									'a',
-									{ href: '#', className: 'nav__link' },
-									'Coaching'
-								),
-								_react2['default'].createElement(
-									'ul',
-									null,
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Sub Category'
-										)
-									),
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Sub Category'
-										)
-									),
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Sub Category'
-										)
-									),
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Sub Category'
-										)
-									),
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Sub Category'
-										)
-									)
-								)
-							),
-							_react2['default'].createElement(
-								'li',
-								null,
-								_react2['default'].createElement(
-									'a',
-									{ href: '#', className: 'nav__link' },
-									'News'
-								)
-							),
-							_react2['default'].createElement(
-								'li',
-								null,
-								_react2['default'].createElement(
-									'a',
-									{ href: '#', className: 'nav__link' },
-									'Contact'
-								),
-								_react2['default'].createElement(
-									'ul',
-									null,
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Instagram'
-										)
-									),
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Facebook'
-										)
-									),
-									_react2['default'].createElement(
-										'li',
-										null,
-										_react2['default'].createElement(
-											'a',
-											{ href: '#' },
-											'Twitter'
-										)
-									)
-								)
-							)
-						)
-					)
-				);
-			}
-		}]);
-
-		return Nav;
-	})(_react2['default'].Component);
-
-	;
-
-	exports['default'] = Nav;
-	module.exports = exports['default'];
-
-/***/ },
-/* 173 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(174);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(161)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./nav.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./nav.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
 /* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -21703,7 +21734,7 @@
 
 
 	// module
-	exports.push([module.id, ".nav__link {\n  text-decoration: none;\n  transition: color 300ms; }\n\n.nav {\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  background: yellow;\n  opacity: 0.75;\n  z-index: 100; }\n  .nav__link {\n    color: black;\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700;\n    font-size: 0.9rem;\n    text-transform: uppercase;\n    letter-spacing: 8px; }\n", ""]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \r\n\t v2.0 | 20110126\r\n\t License: none (public domain)\r\n*/\nhtml {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nhtml, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after {\n  content: '';\n  content: none; }\n\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ndiv {\n  position: relative; }\n\nbody {\n  background: url(\"/images/bg.jpg\");\n  background-attachment: fixed; }\n", ""]);
 
 	// exports
 
